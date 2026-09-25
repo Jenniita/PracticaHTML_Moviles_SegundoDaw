@@ -21,18 +21,27 @@
 
 .grid-contenedor img {
   width: 100%;
-  height: auto;
+  height: 350px;
 }
 
 .section-grid {
   width: 100%;
-  
 }
 
-.grid-contenedor{
+.grid-contenedor {
   display: flex;
   flex-direction: column;
-  
+  gap: 1rem;
+}
+
+.grid-contenedor div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.grid-contenedor button{
+  width: 100px;
 }
 
 .section-beneficios {
@@ -54,10 +63,26 @@
   width: 400px;
   /* Para redondear los bordes */
   border-radius: 10px;
-  
 }
 @media (max-width: 425px) {
   .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-contenedor img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* TABLET */
+@media (min-width: 426px) and (max-width: 1024px) {
+  .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  
+
+  
+  
 }

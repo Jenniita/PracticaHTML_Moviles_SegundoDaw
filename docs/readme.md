@@ -143,3 +143,23 @@ git pull
 - No subas contraseñas, tokens ni datos privados al repositorio.
 - Comprueba siempre `git status` antes de hacer `commit`.
 - Si aparece un archivo que no quieres subir, puedes quitarlo del área de preparación con `git restore --staged NOMBRE_DEL_ARCHIVO`.
+
+## Ajuste del tamaño de las imágenes
+
+Para que todas las imágenes de los productos tengan el mismo tamaño, se modificó el selector `.grid-contenedor img` en `css/index.css`:
+
+```css
+.grid-contenedor img {
+	width: 100%;
+	height: 350px;
+}
+```
+
+### ¿Para qué sirve?
+
+- `width: 100%` hace que cada imagen ocupe todo el ancho disponible de su tarjeta.
+- `height: 350px` establece una altura fija para todas las imágenes.
+- Al tener el mismo ancho y alto, las tarjetas del catálogo quedan alineadas y uniformes.
+- No se utilizó `height: auto` porque cada imagen podía tener una altura diferente según sus dimensiones originales.
+
+Este cambio solo afecta a las imágenes que están dentro de `.grid-contenedor`, por lo que no modifica el tamaño del logo ni del icono del menú.
