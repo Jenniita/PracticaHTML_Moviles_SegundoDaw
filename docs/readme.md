@@ -123,7 +123,7 @@ git commit -m "Añadir estilos para la página de contacto"
 Ver el historial de commits:
 
 ```powershell
-git log --oneline
+git log --oneline :)
 ```
 
 Ver el repositorio remoto configurado:
