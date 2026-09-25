@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.info-inicio {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem 0px 2rem 0px;
+  gap: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.grid-contenedor img {
+  width: 100%;
+  height: auto;
+}
+
+.section-grid {
+  width: 100%;
+  
+}
+
+.grid-contenedor{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.section-beneficios {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--colorGris);
+  padding: 4rem 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-beneficios div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--colorBlanco);
+  padding: 1rem;
+  /* Le damos a cada div el tamaño que queremos que tenga para que sea uniforme */
+  width: 400px;
+  /* Para redondear los bordes */
+  border-radius: 10px;
+  
+}
+@media (max-width: 425px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

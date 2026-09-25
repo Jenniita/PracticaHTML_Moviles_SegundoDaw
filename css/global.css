@@ -1,0 +1,165 @@
+:root {
+  --colorPrimario: rgb(224, 151, 151);
+  --colorSecundario: rgb(155, 205, 218);
+  --colorGris: rgb(223, 222, 222);
+  --colorBlanco: rgb(241, 241, 241);
+  --colorNegro: rgb(39, 39, 39);
+  --colorAcento: rgb(50, 236, 25);
+  --fuentePrimaria: "Oswald", sans-serif;
+  --fuenteSecundaria: "Inter", sans-serif;
+  --fuenteTerciaria: "Roboto", sans-serif;
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* PROPIEDADES CONCRETAS DEL H1 */
+  h1 {
+    color: var(--colorPrimario);
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  /* PROPIEDADES CONCRETAS DEL H2 */
+  h2 {
+    color: var(--colorSecundario);
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  /* PROPIEDADES CONCRETAS DEL H3 */
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  /* PROPIEDADES CONCRETAS DEL P */
+  p {
+    font-family: var(--fuenteSecundaria);
+  }
+
+  /* Se le da al body para que todo lo que no sea TITULOS o PÁRRAFOS tenga la fuente puesta en el BODY */
+  body {
+    font-family: var(--fuenteTerciaria);
+  }
+
+  /* PROPIEDADES GENERALES DE LOS TITULOS */
+  h1,
+  h2,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--fuentePrimaria);
+    /* El Font Weight es el bold de la letra */
+  }
+
+  /* PROPIEDADES DEL HEADER */
+  header {
+    justify-content: space-around;
+    padding: 1rem;
+    align-items: center;
+    background-color: var(--colorSecundario);
+  }
+
+  .logo {
+    align-items: center;
+    color: var(--colorNegro);
+  }
+
+  .titulo {
+    font-family: var(--fuentePrimaria);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .logo img {
+    width: 6rem;
+  }
+
+  /* PROPIEDADES GENERALES DE LOS UL */
+  ul {
+    list-style: none;
+    color: var(--colorNegro);
+    font-size: 1.1rem;
+  }
+
+
+  /* PROPIEDADES GENERALES DE LOS A */
+  a {
+    text-decoration: none;
+    color: var(--colorNegro);
+  }
+
+  .flex {
+    display: flex;
+    gap: 2rem;
+  }
+
+  footer {
+    background-color: var(--colorSecundario);
+    padding: 3rem;
+    display: flex;
+    justify-content: space-around;
+    color: var(--colorNegro);
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .div-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 400px;
+  }
+
+  .div-footer a{
+    font-size: clamp(0.5rem, 4vw, 1rem);
+  }
+
+  /* MENÚ */
+  .menu {
+    display: none;
+  }
+
+  /* RESPONSIVIDAD */
+  @media (max-width: 425px) {
+    .menu {
+      display: contents;
+    }
+
+    .navegador ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navegador {
+      flex-direction: column;
+      background-color: var(--colorBlanco);
+      padding: 15px;
+      position: fixed;
+      top: 5rem;
+      right: -3rem;
+      transition: all 0.5s;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .navegador a {
+      color: var(--colorNegro);
+    }
+
+    .logo img {
+      width: 3rem;
+    }
+
+  }
+
+  /* Clase para mostrar el contenido del Nav */
+  .mostrar {
+    right: 0rem;
+    opacity: 1;
+  }
+}
